@@ -1,22 +1,28 @@
 {
-  "name": "vue-swipeout",
-  "version": "1.0.0",
-  "description": "swipe out ui component for vue",
+  "name": "v-swipeout",
+  "version": "1.0.1",
+  "description": "Swipe out ui component for vue",
   "keywords": [
     "vue",
     "vue-component",
     "swipeout",
-    "v-swipeout",
+    "vue-swipeout",
     "swipe delete"
   ],
   "author": "wangxu <ttian226@gmail.com>",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttian226/vue-swipeout.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "hammerjs": "^2.0.8",
     "vue": "^2.5.2"
   },
   "devDependencies": {
@@ -36,6 +42,8 @@
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
