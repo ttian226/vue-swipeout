@@ -95,7 +95,7 @@ export default {
     },
     prefixCls: {
       type: String,
-      default: 'vm-swipeout'
+      default: 'v-swipeout'
     }
   },
   computed: {
@@ -241,3 +241,54 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-swipeout {
+  overflow: hidden;
+  position: relative;
+}
+.v-swipeout-content {
+  position: relative;
+  background-color: #fff;
+}
+.v-swipeout-cover {
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: none;
+}
+.v-swipeout .v-swipeout-content,
+.v-swipeout .v-swipeout-actions {
+  transition: all 250ms;
+}
+.v-swipeout-swiping .v-swipeout-content {
+  transition: none;
+}
+.v-swipeout-actions {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.v-swipeout-actions-left {
+  left: 0;
+}
+.v-swipeout-actions-right {
+  right: 0;
+}
+.v-swipeout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.v-swipeout-btn-text {
+  padding: 0 12px;
+}
+</style>

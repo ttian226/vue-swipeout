@@ -1,3 +1,5 @@
+# v-swipeout
+
 [![Build Status](https://travis-ci.org/ttian226/vue-swipeout.svg?branch=master)](https://travis-ci.org/ttian226/vue-swipeout)
 
 ## Install
