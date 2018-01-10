@@ -83,7 +83,7 @@ export default {
   props: {
     left: Array,
     right: Array,
-    autoclose: {
+    autoClose: {
       type: Boolean,
       default: false
     },
@@ -180,7 +180,7 @@ export default {
       if (onPress) {
         onPress(ev);
       }
-      if (this.autoclose) {
+      if (this.autoClose) {
         this.close();
       }
     },
