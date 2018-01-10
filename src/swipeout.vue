@@ -87,8 +87,8 @@ export default {
       type: Boolean,
       default: false
     },
-    onopen: Function,
-    onclose: Function,
+    onOpen: Function,
+    onClose: Function,
     disabled: {
       type: Boolean,
       default: false
@@ -206,8 +206,8 @@ export default {
       }
     },
     open (value, openedLeft, openedRight) {
-      if (!this.openedLeft && !this.openedRight && this.onopen) {
-        this.onopen();
+      if (!this.openedLeft && !this.openedRight && this.onOpen) {
+        this.onOpen();
       }
 
       this.openedLeft = openedLeft;
@@ -215,8 +215,8 @@ export default {
       this._setStyle(value);
     },
     close () {
-      if ((this.openedLeft || this.openedRight) && this.onclose) {
-        this.onclose();
+      if ((this.openedLeft || this.openedRight) && this.onClose) {
+        this.onClose();
       }
       this._setStyle(0);
       this.openedLeft = false;
