@@ -6,7 +6,7 @@ import Hammer from 'hammerjs' // used by guardDirections
  * @param  {Object} sources Any type of object
  * @return {Object}         Merged Object
  */
-export function assign(target, ...sources) {
+export function assign(target: any, ...sources: any[]) {
   for (let i = 0; i < sources.length; i++) {
     const source = sources[i]
     const keys = Object.keys(source)
@@ -30,7 +30,7 @@ export function createProp() {
   }
 }
 
-export function capitalize (str) {
+export function capitalize (str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
@@ -46,7 +46,7 @@ export const directions = ['up', 'down', 'left', 'right', 'horizontal', 'vertica
  * @param  {Objects} options Hammer Options
  * @return {Object}         [Hammer Options]
  */
-export function guardDirections (options) {
+export function guardDirections (options: {direction: string}) {
   var dir = options.direction
   if (typeof dir === 'string') {
     var hammerDirection = 'DIRECTION_' + dir.toUpperCase()

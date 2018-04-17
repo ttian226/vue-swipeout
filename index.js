@@ -1,3 +1,3 @@
-import VSwipeout from './src/swipeout';
+import VSwipeout from './src/';
 
 export default VSwipeout;
